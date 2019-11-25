@@ -2,7 +2,7 @@
 
 AdMob Mediation Adapter for iOS apps looking to load and show Rewarded Surveys from Pollfish in the same waterfall with other Rewarded Ads.
 
-> **Note:** A detailed step by step guide is provided on how to integrate can be found [here](https://github.com/pollfish/docs/edit/master/ios-admob-adapter.md) 
+> **Note:** A detailed step by step guide is provided on how to integrate can be found [here](https://www.pollfish.com/docs/ios-admob-adapter) 
 
 ### Step 1: Add Pollfish AdMob Adapter to your project
 
@@ -21,6 +21,7 @@ You can find latest Pollfish iOS SDK version on CocoaPods here
 
 Run pod install on the command line to install Pollfish cocoapod.
 
+
 ### Step 2: Use and control Pollfish AdMob Adapter in your Rewarded Ad Unit 
 
 Pollfish AdMob Adapter provides different options that you can use to control the behaviour of Pollfish SDK.
@@ -32,16 +33,16 @@ Below you can see all the available options of **GADPollfishRewardedNetworkExtra
 
 No | Description
 ------------ | -------------
-5.1 | **.pollfishAPIKey**  <br/> Sets Pollfish SDK API key as provided on Pollfish
+5.1 | **.pollfishAPIKey**  <br/> Sets Pollfish SDK API key as provided by Pollfish
 5.2 | **.requestUUID**  <br/> Sets a unique id to identify a user and be passed through server-to-server callbacks
 5.3 | **.releaseMode**  <br/> Sets Pollfish SDK to Developer or Release mode
 
 
-#### 2.1 .pollfishAPIKey
+#### 3.1 .pollfishAPIKey
 
 Pollfish API Key as provided by Pollfish on  [Pollfish Dashboard](https://www.pollfish.com/publisher/) after you sign up to the platform.  If you have already specified Pollfish API Key on AdMob's UI, this param will be ignored.
 
-#### 2.2 .requestUUID
+#### 3.2 .requestUUID
 
 Sets a unique id to identify a user and be passed through server-to-server callbacks on survey completion. 
 
@@ -49,7 +50,7 @@ In order to register for such callbacks you can set up your server URL on your a
 
 If you would like to read more on Pollfish s2s cllab
 
-#### 2.3 .releaseMode
+#### 3.3 .releaseMode
 
 Sets Pollfish SDK to Developer or Release mode.
 
@@ -57,6 +58,12 @@ Sets Pollfish SDK to Developer or Release mode.
 *   **Release mode** is the mode to be used for a released app in any app store (start receiving paid surveys).
 
 Pollfish AdMob Adapter runs Pollfish SDK in release mode by default. If you would like to test with Test survey, you should set release mode to fasle.
+
+Below you can see an example on how you can use GADPollfishRewardedNetworkExtras to pass info to Pollfish AdMob Adapter:
+```
+#import <PollfishAdMobAdapter/GADPollfishRewardedNetworkExtras.h>
+```
+</br>
 ```
 GADRequest *request = [GADRequest request];
     
@@ -69,8 +76,11 @@ pollfishNetworkExtras.requestUUID = @"YOUR_USER_ID";
 [request registerAdNetworkExtras:pollfishNetworkExtras];
 ```
 
-### Step 3: Publish 
+### Step 4: Publish your app on the store
 
 If you everything worked fine during the previous steps, you should turn Pollfish to release mode and publish your app.
 
+> **Note:** After you take your app live, you should request your account to get verified through Pollfish Dashboard in the App Settings area.
+
+> **Note:** There is an option to show **Standalone Demographic Questions** needed for Pollfish to target users with surveys even when no actually surveys are available. Those surveys do not deliver any revenue to the publisher (but they can increase fill rate) and therefore if you do not want to show such surveys in the Waterfall you should visit your **App Settings** are and disable that option.
 
