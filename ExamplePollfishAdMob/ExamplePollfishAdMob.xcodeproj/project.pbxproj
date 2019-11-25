@@ -1,0 +1,460 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00ED15D24B571B8DE8762FB2 /* Pods_ExamplePollfishAdMob.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB6DE711543F2E3F5CE94438 /* Pods_ExamplePollfishAdMob.framework */; };
+		40A0924B238941C200E557DE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A0924A238941C200E557DE /* AppDelegate.m */; };
+		40A0924E238941C200E557DE /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A0924D238941C200E557DE /* SceneDelegate.m */; };
+		40A09251238941C200E557DE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A09250238941C200E557DE /* ViewController.m */; };
+		40A09254238941C200E557DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40A09252238941C200E557DE /* Main.storyboard */; };
+		40A09256238941C500E557DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40A09255238941C500E557DE /* Assets.xcassets */; };
+		40A09259238941C500E557DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40A09257238941C500E557DE /* LaunchScreen.storyboard */; };
+		40A0925C238941C500E557DE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A0925B238941C500E557DE /* main.m */; };
+		40E5CBBD238C6B9A0086FC52 /* PollfishAdMobAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40E5CBBB238C6B110086FC52 /* PollfishAdMobAdapter.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		404C53AD238942D3003C604E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		40A09246238941C200E557DE /* ExamplePollfishAdMob.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExamplePollfishAdMob.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		40A09249238941C200E557DE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		40A0924A238941C200E557DE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		40A0924C238941C200E557DE /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		40A0924D238941C200E557DE /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		40A0924F238941C200E557DE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		40A09250238941C200E557DE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		40A09253238941C200E557DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		40A09255238941C500E557DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		40A09258238941C500E557DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		40A0925A238941C500E557DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40A0925B238941C500E557DE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		40E5CBBB238C6B110086FC52 /* PollfishAdMobAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PollfishAdMobAdapter.framework; sourceTree = "<group>"; };
+		7ACD3C9B44236E6F5A2BC8F6 /* Pods-ExamplePollfishAdMob.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExamplePollfishAdMob.debug.xcconfig"; path = "Target Support Files/Pods-ExamplePollfishAdMob/Pods-ExamplePollfishAdMob.debug.xcconfig"; sourceTree = "<group>"; };
+		C25EF3A69E06073659D166FE /* Pods-ExamplePollfishAdMob.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExamplePollfishAdMob.release.xcconfig"; path = "Target Support Files/Pods-ExamplePollfishAdMob/Pods-ExamplePollfishAdMob.release.xcconfig"; sourceTree = "<group>"; };
+		EB6DE711543F2E3F5CE94438 /* Pods_ExamplePollfishAdMob.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExamplePollfishAdMob.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		40A09243238941C200E557DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40E5CBBD238C6B9A0086FC52 /* PollfishAdMobAdapter.framework in Frameworks */,
+				00ED15D24B571B8DE8762FB2 /* Pods_ExamplePollfishAdMob.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3947BD45DC790AFB97615B7C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				40E5CBBB238C6B110086FC52 /* PollfishAdMobAdapter.framework */,
+				EB6DE711543F2E3F5CE94438 /* Pods_ExamplePollfishAdMob.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		40A0923D238941C200E557DE = {
+			isa = PBXGroup;
+			children = (
+				40A09248238941C200E557DE /* ExamplePollfishAdMob */,
+				40A09247238941C200E557DE /* Products */,
+				B353134C354CCCB2DB1AB804 /* Pods */,
+				3947BD45DC790AFB97615B7C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		40A09247238941C200E557DE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				40A09246238941C200E557DE /* ExamplePollfishAdMob.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		40A09248238941C200E557DE /* ExamplePollfishAdMob */ = {
+			isa = PBXGroup;
+			children = (
+				40A09249238941C200E557DE /* AppDelegate.h */,
+				40A0924A238941C200E557DE /* AppDelegate.m */,
+				40A0924C238941C200E557DE /* SceneDelegate.h */,
+				40A0924D238941C200E557DE /* SceneDelegate.m */,
+				40A0924F238941C200E557DE /* ViewController.h */,
+				40A09250238941C200E557DE /* ViewController.m */,
+				40A09252238941C200E557DE /* Main.storyboard */,
+				40A09255238941C500E557DE /* Assets.xcassets */,
+				40A09257238941C500E557DE /* LaunchScreen.storyboard */,
+				40A0925A238941C500E557DE /* Info.plist */,
+				40A0925B238941C500E557DE /* main.m */,
+			);
+			path = ExamplePollfishAdMob;
+			sourceTree = "<group>";
+		};
+		B353134C354CCCB2DB1AB804 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7ACD3C9B44236E6F5A2BC8F6 /* Pods-ExamplePollfishAdMob.debug.xcconfig */,
+				C25EF3A69E06073659D166FE /* Pods-ExamplePollfishAdMob.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		40A09245238941C200E557DE /* ExamplePollfishAdMob */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 40A0925F238941C500E557DE /* Build configuration list for PBXNativeTarget "ExamplePollfishAdMob" */;
+			buildPhases = (
+				BAB7C6EF131C982046FABFF8 /* [CP] Check Pods Manifest.lock */,
+				40A09242238941C200E557DE /* Sources */,
+				40A09243238941C200E557DE /* Frameworks */,
+				40A09244238941C200E557DE /* Resources */,
+				404C53AD238942D3003C604E /* Embed Frameworks */,
+				08DB131CC9AC398438F601A3 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ExamplePollfishAdMob;
+			productName = ExamplePollfishAdMob;
+			productReference = 40A09246238941C200E557DE /* ExamplePollfishAdMob.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		40A0923E238941C200E557DE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = POLLFISH;
+				TargetAttributes = {
+					40A09245238941C200E557DE = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 40A09241238941C200E557DE /* Build configuration list for PBXProject "ExamplePollfishAdMob" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 40A0923D238941C200E557DE;
+			productRefGroup = 40A09247238941C200E557DE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				40A09245238941C200E557DE /* ExamplePollfishAdMob */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		40A09244238941C200E557DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40A09259238941C500E557DE /* LaunchScreen.storyboard in Resources */,
+				40A09256238941C500E557DE /* Assets.xcassets in Resources */,
+				40A09254238941C200E557DE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		08DB131CC9AC398438F601A3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ExamplePollfishAdMob/Pods-ExamplePollfishAdMob-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ExamplePollfishAdMob/Pods-ExamplePollfishAdMob-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ExamplePollfishAdMob/Pods-ExamplePollfishAdMob-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BAB7C6EF131C982046FABFF8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ExamplePollfishAdMob-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		40A09242238941C200E557DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40A09251238941C200E557DE /* ViewController.m in Sources */,
+				40A0924B238941C200E557DE /* AppDelegate.m in Sources */,
+				40A0925C238941C500E557DE /* main.m in Sources */,
+				40A0924E238941C200E557DE /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		40A09252238941C200E557DE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				40A09253238941C200E557DE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		40A09257238941C500E557DE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				40A09258238941C500E557DE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		40A0925D238941C500E557DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		40A0925E238941C500E557DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		40A09260238941C500E557DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7ACD3C9B44236E6F5A2BC8F6 /* Pods-ExamplePollfishAdMob.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 984ZRM32BG;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_NO_COMMON_BLOCKS = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/GoogleUtilities/GoogleUtilities.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/nanopb/nanopb.framework/Headers\"",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = ExamplePollfishAdMob/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pollfish.mediation.ExamplePollfishAdMob;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		40A09261238941C500E557DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C25EF3A69E06073659D166FE /* Pods-ExamplePollfishAdMob.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 984ZRM32BG;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_NO_COMMON_BLOCKS = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/GoogleUtilities/GoogleUtilities.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/nanopb/nanopb.framework/Headers\"",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = ExamplePollfishAdMob/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pollfish.mediation.ExamplePollfishAdMob;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		40A09241238941C200E557DE /* Build configuration list for PBXProject "ExamplePollfishAdMob" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40A0925D238941C500E557DE /* Debug */,
+				40A0925E238941C500E557DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		40A0925F238941C500E557DE /* Build configuration list for PBXNativeTarget "ExamplePollfishAdMob" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40A09260238941C500E557DE /* Debug */,
+				40A09261238941C500E557DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 40A0923E238941C200E557DE /* Project object */;
+}
