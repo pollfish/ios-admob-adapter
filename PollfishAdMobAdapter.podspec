@@ -10,7 +10,7 @@ s.author = { 'Pollfish Inc.' => 'support@pollfish.com' }
 s.social_media_url = 'https://twitter.com/pollfish'
 s.requires_arc = true
 s.source = {
-:git => 'https://github.com/pollfish/ios-admob-adapter',
+:git => 'https://github.com/pollfish/ios-admob-adapter.git',
 :tag => s.version.to_s
 }
 s.dependencies = {
