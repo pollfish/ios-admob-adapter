@@ -57,8 +57,9 @@
     // Look for Pollfish Params Extras provided to the adapter
     
     __block NSString *requestUUID=nil;
-    __block bool releaseMode = false;
-    NSString *apiKey=nil;
+    __block bool releaseMode = true;
+    __block bool offerwallMode = false;
+    NSString *jsonParams=nil;
     
     GADPollfishRewardedNetworkExtras *extras = [_adConfig extras];
     
@@ -74,14 +75,52 @@
         
     }
     
-    // Look for the "parameter" key to fetch the parameter you defined in the AdMob UI.
-    
-    apiKey = adConfiguration.credentials.settings[@"parameter"];
-    
-    if ((apiKey!=nil) && ([apiKey length] == 0)) {
-        pollfishAPIKey = apiKey;
-        if(POLLFISH_DEBUG) NSLog(@"Pollfish API Key from AdMob UI: %@", pollfishAPIKey);
+   // Look for the "parameter" key to fetch the parameter you defined in the AdMob UI.
+
+    jsonParams = adConfiguration.credentials.settings[@"parameter"];
+
+    if ((jsonParams!=nil) && ([jsonParams length] > 0)) {
+        
+        if(POLLFISH_DEBUG) NSLog(@"Pollfish jsonParams: %@", jsonParams);
+        
+        NSData *data = [jsonParams dataUsingEncoding:NSUTF8StringEncoding];
+        
+        NSDictionary *jsonDictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+        
+        if((jsonDictionary!=nil) && ([jsonDictionary count]>0)){
+           
+            if ([jsonDictionary objectForKey:@"api_key"]) {
+               
+                pollfishAPIKey = [jsonDictionary objectForKey:@"api_key"];
+                
+                if(POLLFISH_DEBUG) NSLog(@"Pollfish API Key from AdMob UI: %@", pollfishAPIKey);
+            }
+            
+            if ([jsonDictionary objectForKey:@"request_uuid"]) {
+               
+                requestUUID = [jsonDictionary objectForKey:@"request_uuid"];
+                
+                if(POLLFISH_DEBUG) NSLog(@"Pollfish requestUUID  from AdMob UI: %@", requestUUID);
+            }
+            
+            if ([jsonDictionary objectForKey:@"release_mode"]) {
+                
+                releaseMode = [[jsonDictionary objectForKey:@"release_mode"] boolValue];
+                     
+                if(POLLFISH_DEBUG) NSLog(@"Pollfish releaseMode from AdMob UI: %d", releaseMode);
+            }
+            
+            
+            if ([jsonDictionary objectForKey:@"offerwall_mode"]) {
+                         
+                offerwallMode = [[jsonDictionary objectForKey:@"offerwall_mode"] boolValue];
+                               
+                if(POLLFISH_DEBUG) NSLog(@"Pollfish offerwall_mode from AdMob UI: %d", offerwallMode);
+                           
+            }
+        }
     }
+    
     if(POLLFISH_DEBUG) NSLog(@"Pollfish API Key: %@", pollfishAPIKey);
     
     if ([pollfishAPIKey length] == 0) {
@@ -90,12 +129,17 @@
         return;
     }
     
+    //used to retrieve the top level window
+    __block UIWindow *window = [[[UIApplication sharedApplication] windows] lastObject];
+      
     PollfishParams *pollfishParams =  [PollfishParams initWith:^(PollfishParams *pollfishParams) {
-        
-        pollfishParams.indicatorPosition=PollFishPositionMiddleRight;
-        pollfishParams.releaseMode= releaseMode;
-        pollfishParams.rewardMode=true;
-        pollfishParams.requestUUID=requestUUID;
+          
+          pollfishParams.indicatorPosition=PollFishPositionMiddleRight;
+          pollfishParams.releaseMode= releaseMode;
+          pollfishParams.rewardMode=true;
+          pollfishParams.requestUUID=requestUUID;
+          pollfishParams.offerwallMode=offerwallMode;
+          pollfishParams.pollfishViewContainer=window.rootViewController.view;
     }];
     
     [Pollfish initWithAPIKey:pollfishAPIKey andParams:pollfishParams];

@@ -13,5 +13,5 @@
 @end
 
 @implementation GADPollfishRewardedNetworkExtras
-@synthesize requestUUID,releaseMode;
+@synthesize requestUUID,releaseMode,offerwallMode;
 @end

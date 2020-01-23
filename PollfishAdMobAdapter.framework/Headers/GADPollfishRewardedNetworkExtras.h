@@ -24,6 +24,10 @@
 */
 @property (nonatomic, assign) bool releaseMode;
 
+/*!
+* @brief Controls whether Pollfish will run in Offerwall mode
+*/
+@property (nonatomic, assign) bool offerwallMode;
 
 
 @end
