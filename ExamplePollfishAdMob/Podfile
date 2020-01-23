@@ -7,5 +7,5 @@ target 'ExamplePollfishAdMob' do
 
   # Pods for ExamplePollfishAdMob
 pod 'Google-Mobile-Ads-SDK'
-pod 'Pollfish'
+pod 'PollfishAdMobAdapter'
 end
