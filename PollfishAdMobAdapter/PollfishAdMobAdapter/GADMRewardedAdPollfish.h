@@ -10,6 +10,8 @@
 
 @import GoogleMobileAds;
 
+static BOOL panelOpen =false;
+
 @interface GADMRewardedAdPollfish : NSObject <GADMediationRewardedAd>
 
 - (void)loadRewardedAdForAdConfiguration:(GADMediationRewardedAdConfiguration *)adConfiguration

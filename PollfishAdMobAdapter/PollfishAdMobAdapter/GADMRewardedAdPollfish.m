@@ -142,7 +142,26 @@
           pollfishParams.pollfishViewContainer=window.rootViewController.view;
     }];
     
-    [Pollfish initWithAPIKey:pollfishAPIKey andParams:pollfishParams];
+    if(!panelOpen){
+     
+         [Pollfish initWithAPIKey:pollfishAPIKey andParams:pollfishParams];
+        
+        panelOpen = false;
+          
+        if(POLLFISH_DEBUG) NSLog(@"Pollfish init");
+        
+     }else{
+         
+         NSError *error =
+         [NSError errorWithDomain:kGADMAdapterPollfishErrorDomain
+                             code:0
+                         userInfo:@{NSLocalizedDescriptionKey : @"Survey Already Visible"}];
+         
+         _completionHandler(nil, error);
+         
+         if(POLLFISH_DEBUG) NSLog(@"Pollfish panel is open/visible, do not init");
+     }
+
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pollfishNotAvailable) name:@"PollfishSurveyNotAvailable" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pollfishCompleted:) name:@"PollfishSurveyCompleted" object:nil];
@@ -193,16 +212,20 @@
 {
     if(POLLFISH_DEBUG) NSLog(@"Pollfish Opened");
     
+    panelOpen=true;
+    
     [_adEventDelegate willPresentFullScreenView];
     [_adEventDelegate didStartVideo];
     [_adEventDelegate reportClick];
     [_adEventDelegate reportImpression];
+    
 }
 
 - (void)pollfishClosed
 {
     if(POLLFISH_DEBUG) NSLog(@"Pollfish Closed");
     
+    panelOpen=false;
     
     [_adEventDelegate didEndVideo];
     [_adEventDelegate didDismissFullScreenView];
@@ -211,6 +234,8 @@
 - (void)pollfishNotAvailable
 {
     if(POLLFISH_DEBUG) NSLog(@"Pollfish Not Available");
+    
+    panelOpen=false;
     
     NSError *error =
     [NSError errorWithDomain:kGADMAdapterPollfishErrorDomain
