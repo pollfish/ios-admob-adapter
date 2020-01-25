@@ -36,6 +36,19 @@
     
     if(POLLFISH_DEBUG) NSLog(@"loadRewardedAdForAdConfiguration");
     
+    if(Pollfish.isPollfishPanelOpen) {
+
+           NSError *error = [NSError errorWithDomain:kGADMAdapterPollfishErrorDomain
+
+                               code:0
+
+                           userInfo:@{NSLocalizedDescriptionKey : @"Survey Already Present, Skipping"}];
+
+           completionHandler(nil, error);
+
+           return;
+
+       }
     
     _adConfig = adConfiguration;
     __block atomic_flag completionHandlerCalled = ATOMIC_FLAG_INIT;
