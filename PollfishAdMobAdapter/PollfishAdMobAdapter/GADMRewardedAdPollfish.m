@@ -250,13 +250,9 @@
 - (void)pollfishUserRejectedSurvey
 {
     if(POLLFISH_DEBUG) NSLog(@"Pollfish User Rejected Survey");
-    
-    NSError *error =
-    [NSError errorWithDomain:kGADMAdapterPollfishErrorDomain
-                        code:0
-                    userInfo:@{NSLocalizedDescriptionKey : @"User Rejected Survey"}];
-    
-    [_adEventDelegate didFailToPresentWithError:error];
+
+    [_adEventDelegate willDismissFullScreenView];
+    [_adEventDelegate didDismissFullScreenView];
 }
 
 @end
