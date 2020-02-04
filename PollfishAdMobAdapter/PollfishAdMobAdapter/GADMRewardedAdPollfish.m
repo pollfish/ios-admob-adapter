@@ -239,12 +239,9 @@
 - (void)pollfishUsernotEligible
 {
     if(POLLFISH_DEBUG)  NSLog(@"Pollfish User Not Eligible");
-    NSError *error =
-    [NSError errorWithDomain:kGADMAdapterPollfishErrorDomain
-                        code:0
-                    userInfo:@{NSLocalizedDescriptionKey : @"User not eligible"}];
     
-    [_adEventDelegate didFailToPresentWithError:error];
+    [_adEventDelegate willDismissFullScreenView];
+    [_adEventDelegate didDismissFullScreenView];
 }
 
 - (void)pollfishUserRejectedSurvey
