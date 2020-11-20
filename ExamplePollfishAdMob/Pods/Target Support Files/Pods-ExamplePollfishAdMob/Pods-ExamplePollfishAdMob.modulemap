@@ -1,6 +1,0 @@
-framework module Pods_ExamplePollfishAdMob {
-  umbrella header "Pods-ExamplePollfishAdMob-umbrella.h"
-
-  export *
-  module * { export * }
-}
