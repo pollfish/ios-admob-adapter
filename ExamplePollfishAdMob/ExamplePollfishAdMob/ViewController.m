@@ -1,9 +1,8 @@
 //
 //  ViewController.m
-//  TestAdMob
+//  ExamplePollfishAdMob
 //
-//  Created by Pollfish on 20/11/19.
-//  Copyright © 2019 POLLFISH. All rights reserved.
+//  Copyright © 2020 Pollfish, Inc. All rights reserved.
 //
 
 #import "ViewController.h"
@@ -42,9 +41,6 @@
     
     NSLog(@"createAndLoadRewardedAd");
     
-    //GADMobileAds.sharedInstance.requestConfiguration.testDeviceIdentifiers =@[ kGADSimulatorID, @"369ab630a1f3482229dd73c624095464"];
-    
-    
     GADRewardedAd *rewardedAd  = [[GADRewardedAd alloc]
                                   initWithAdUnitID:@"ADMOB_AD_UNIT_KEY"];
     
@@ -63,7 +59,6 @@
             // Handle ad failed to load case.
             NSLog(@"Error");
         } else {
-            
             // Ad successfully loaded.
             self->rewardedAdBtn.hidden=false;
             NSLog(@"Ad successfully loaded.");

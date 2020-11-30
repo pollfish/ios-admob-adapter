@@ -1,9 +1,8 @@
 //
 //  PollfishNetworkExtras.m
-//  TestAdMob
+//  PollfishAdMobAdapter
 //
-//  Created by Pollfish on 20/11/19.
-//  Copyright © 2019 POLLFISH. All rights reserved.
+//  Copyright © 2020 Pollfish, Inc. All rights reserved.
 //
 
 #import "GADPollfishRewardedNetworkExtras.h"

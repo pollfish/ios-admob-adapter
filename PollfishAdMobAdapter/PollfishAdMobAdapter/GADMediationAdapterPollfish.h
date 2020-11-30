@@ -1,14 +1,12 @@
 //
 //  GADMediationAdapterPollfish.h
-//  TestAdMob
+//  PollfishAdMobAdapter
 //
-//  Created by Pollfish on 21/11/19.
-//  Copyright © 2019 POLLFISH. All rights reserved.
+//  Copyright © 2020 Pollfish, Inc. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-
-@import GoogleMobileAds;
+#import <GoogleMobileAds/GoogleMobileAds.h>
 
 @interface GADMediationAdapterPollfish : NSObject <GADMediationAdapter>
 

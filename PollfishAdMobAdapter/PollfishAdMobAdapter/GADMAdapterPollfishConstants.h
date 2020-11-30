@@ -1,13 +1,13 @@
 //
 //  GADMAdapterPollfishConstants.h
-//  TestAdMob
+//  PollfishAdMobAdapter
 //
-//  Created by Pollfish on 21/11/19.
-//  Copyright © 2019 POLLFISH. All rights reserved.
+//  Copyright © 2020 Pollfish, Inc. All rights reserved.
 //
+
 #define POLLFISH_DEBUG 0
 
 // Adapter version string
-static NSString *const kGADMAdapterPollfishVersion = @"5.4.1.1";
+static NSString *const kGADMAdapterPollfishVersion = @"5.5.0.0";
 
 static NSString *const kGADMAdapterPollfishErrorDomain = @"com.pollfish.mediation";

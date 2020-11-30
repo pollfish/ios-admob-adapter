@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:/Users/andreasvourkos/Desktop/library/pollfish/PollfishAdMobAdapter.xcodeproj">
+      location = "self:">
    </FileRef>
 </Workspace>

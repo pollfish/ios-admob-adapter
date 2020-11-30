@@ -2,8 +2,7 @@
 //  main.m
 //  ExamplePollfishAdMob
 //
-//  Created by Pollfish on 23/11/19.
-//  Copyright © 2019 POLLFISH. All rights reserved.
+//  Copyright © 2020 Pollfish, Inc. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

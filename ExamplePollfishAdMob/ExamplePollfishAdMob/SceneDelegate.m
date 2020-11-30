@@ -1,3 +1,10 @@
+//
+//  SceneDelegate.m
+//  ExamplePollfishAdMob
+//
+//  Copyright © 2020 Pollfish, Inc. All rights reserved.
+//
+
 #import "SceneDelegate.h"
 
 @interface SceneDelegate ()

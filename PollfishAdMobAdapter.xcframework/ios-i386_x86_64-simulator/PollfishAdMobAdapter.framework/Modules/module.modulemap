@@ -1,0 +1,6 @@
+framework module PollfishAdMobAdapter {
+  umbrella header "PollfishAdMobAdapter.h"
+
+  export *
+  module * { export * }
+}
