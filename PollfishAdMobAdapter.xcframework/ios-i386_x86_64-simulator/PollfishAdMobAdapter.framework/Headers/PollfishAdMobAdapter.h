@@ -2,8 +2,10 @@
 //  PollfishAdMobAdapter.h
 //  PollfishAdMobAdapter
 //
-//  Created by Fotis Mitropoulos on 27/11/20.
+//  Created by Pollfish, Inc on 21/11/19.
+//  Copyright © 2019 Pollfish, Inc. All rights reserved.
 //
+
 
 #import <Foundation/Foundation.h>
 #import "GADMRewardedAdPollfish.h"
@@ -16,6 +18,4 @@ FOUNDATION_EXPORT double PollfishAdMobAdapterVersionNumber;
 
 //! Project version string for PollfishAdMobAdapter.
 FOUNDATION_EXPORT const unsigned char PollfishAdMobAdapterVersionString[];
-
-// In this header, you should import all the public headers of your framework using statements like #import <PollfishAdMobAdapter/PublicHeader.h>
 
