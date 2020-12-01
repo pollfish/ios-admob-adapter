@@ -19,6 +19,9 @@ s.dependencies = {
 }
 s.documentation_url = 'https://www.pollfish.com/docs/ios-admob-adapter'
 s.vendored_frameworks = 'PollfishAdMobAdapter.xcframework'
-s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
-s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+s.xcconfig = {
+        "VALID_ARCHS": "armv7 arm64",
+        "VALID_ARCHS[sdk=iphoneos*]": "armv7 arm64",
+        "VALID_ARCHS[sdk=iphonesimulator*]": "x86_64"
+    }
 end
