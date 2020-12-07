@@ -6,23 +6,23 @@
 	<dict>
 		<key>Headers/GADMRewardedAdPollfish.h</key>
 		<data>
-		YARNUDg1H9vkHmckbXq0tC83yGI=
+		ck8xxtXgxBDu6Cxz8DT1Fp5A20g=
 		</data>
 		<key>Headers/GADMediationAdapterPollfish.h</key>
 		<data>
-		PJygs3sp5pnKg01KKT/2apK+DW0=
+		3uj52SyUc/Ncmz7OgJOF8nbeYYA=
 		</data>
 		<key>Headers/GADPollfishRewardedNetworkExtras.h</key>
 		<data>
-		U9NYYUU1YBvNWn/yusiObrNGuls=
+		PURWCTpXremdxBnJtzI3iaAi+2g=
 		</data>
 		<key>Headers/PollfishAdMobAdapter.h</key>
 		<data>
-		NnPKPEAtgVKiipXOy6gxqYhtd/A=
+		lihH6ETrBupO7L4cupkiSka8wHA=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		LrVrb8Xz4EW0HpbgC4JgydrZlkk=
+		GD2pRlNS0oJqv1Wy0q5V3xwTnIk=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -35,44 +35,44 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			YARNUDg1H9vkHmckbXq0tC83yGI=
+			ck8xxtXgxBDu6Cxz8DT1Fp5A20g=
 			</data>
 			<key>hash2</key>
 			<data>
-			w7C7XtG1Pmb69baLBukoN/d47ZQth+9SM4bFV0snXm0=
+			3odROsKByN8xRlDOB2YxQHO5GUlaisc6f5kKeAlTi9c=
 			</data>
 		</dict>
 		<key>Headers/GADMediationAdapterPollfish.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			PJygs3sp5pnKg01KKT/2apK+DW0=
+			3uj52SyUc/Ncmz7OgJOF8nbeYYA=
 			</data>
 			<key>hash2</key>
 			<data>
-			W2BbgzhW+r+KupLVrd+s3FKtwTZoYV9NRaSWzET0xOQ=
+			/xZuF2IEBNp543IEMY7jFS5P05p4CAxqEX3itmKHbGc=
 			</data>
 		</dict>
 		<key>Headers/GADPollfishRewardedNetworkExtras.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			U9NYYUU1YBvNWn/yusiObrNGuls=
+			PURWCTpXremdxBnJtzI3iaAi+2g=
 			</data>
 			<key>hash2</key>
 			<data>
-			CsecRdSW3Ld4jqaJYcb40DemAwS237h2dOkh837Jnvg=
+			NwWI7/QJ5LbkaoGtimelNHnNyfOab0dq3SEgVaq833g=
 			</data>
 		</dict>
 		<key>Headers/PollfishAdMobAdapter.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			NnPKPEAtgVKiipXOy6gxqYhtd/A=
+			lihH6ETrBupO7L4cupkiSka8wHA=
 			</data>
 			<key>hash2</key>
 			<data>
-			NVCgQTamcnd1FRSbcjFYEzbLVuxvBkGy8hR37Wajuk4=
+			4ZnVGGlY9N42ek3JF/QZ4/GyRy5UAreLAd3mfJvLokI=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

@@ -1,8 +1,8 @@
 //
 //  GADMRewardedAdPollfish.h
+//  PollfishAdMobAdapter
 //
-//  Created by Pollfish, Inc on 21/11/19.
-//  Copyright © 2019 Pollfish, Inc. All rights reserved.
+//  Copyright © 2020 Pollfish, Inc. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
