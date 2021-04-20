@@ -6,9 +6,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <GoogleMobileAds/GoogleMobileAds.h>
+@import GoogleMobileAds;
+#import <Pollfish/Pollfish-Swift.h>
 
-@interface GADMRewardedAdPollfish : NSObject <GADMediationRewardedAd>
+@interface GADMRewardedAdPollfish : NSObject <GADMediationRewardedAd, PollfishDelegate>
 
 - (void)loadRewardedAdForAdConfiguration:(GADMediationRewardedAdConfiguration *)adConfiguration
                        completionHandler:

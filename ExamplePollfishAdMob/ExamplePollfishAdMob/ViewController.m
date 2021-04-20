@@ -11,7 +11,7 @@
 
 @import GoogleMobileAds;
 
-@interface ViewController ()<GADRewardedAdDelegate>
+@interface ViewController ()<GADFullScreenContentDelegate>
 @property(nonatomic, strong)  GADRewardedAd *rewardedAd;
 @property (strong, nonatomic) IBOutlet UIButton *rewardedAdBtn;
 @end
@@ -23,26 +23,26 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.rewardedAd = [self createAndLoadRewardedAd];
+    [self createAndLoadRewardedAd];
 }
 
 - (IBAction)showRewardedAd:(id)sender {
-    
-    if (self.rewardedAd.isReady) {
-        [self.rewardedAd presentFromRootViewController:self delegate:self];
+    if (self.rewardedAd) {
+        [self.rewardedAd presentFromRootViewController:self userDidEarnRewardHandler:^(void) {
+            GADAdReward *reward = self.rewardedAd.adReward;
+            NSString *rewardMessage = [NSString stringWithFormat:@"Reward received with currency %@, amount %lf", reward.type, [reward.amount doubleValue]];
+            NSLog(@"%@", rewardMessage);
+        }];
     } else {
         NSLog(@"Ad wasn't ready");
     }
 }
 
-- (GADRewardedAd *)createAndLoadRewardedAd {
+- (void) createAndLoadRewardedAd {
     
     rewardedAdBtn.hidden=true;
     
     NSLog(@"createAndLoadRewardedAd");
-    
-    GADRewardedAd *rewardedAd  = [[GADRewardedAd alloc]
-                                  initWithAdUnitID:@"ADMOB_AD_UNIT_KEY"];
     
     GADRequest *request = [GADRequest request];
     
@@ -54,45 +54,31 @@
     
     [request registerAdNetworkExtras:pollfishNetworkExtras];
     
-    [rewardedAd loadRequest:request completionHandler:^(GADRequestError * _Nullable error) {
+    [GADRewardedAd loadWithAdUnitID:@"ADMOB_AD_UNIT_KEY" request:request completionHandler:^(GADRewardedAd *ad, NSError *error) {
         if (error) {
-            // Handle ad failed to load case.
-            NSLog(@"Error");
-        } else {
-            // Ad successfully loaded.
-            self->rewardedAdBtn.hidden=false;
-            NSLog(@"Ad successfully loaded.");
+            NSLog(@"Failed to load interstitial ad with error: %@", [error localizedDescription]);
+            return;
         }
+        self->rewardedAdBtn.hidden=false;
+        self.rewardedAd = ad;
+        self.rewardedAd.fullScreenContentDelegate = self;
     }];
-    
-    return rewardedAd;
 }
 
+#pragma mark GADFullScreenContentDelegate methods
 
-#pragma mark GADRewardedAdDelegate implementation
-
-- (void)rewardedAd:(nonnull GADRewardedAd *)rewardedAd
- userDidEarnReward:(nonnull GADAdReward *)reward {
-    NSString *rewardMessage =
-    [NSString stringWithFormat:@"Reward received with currency %@ , amount %lf", reward.type,
-     [reward.amount doubleValue]];
-    NSLog(@"%@", rewardMessage);
+- (void)adDidPresentFullScreenContent:(id)ad {
+    NSLog(@"Rewarded ad has presented.");
 }
 
-- (void)rewardedAd:(nonnull GADRewardedAd *)rewardedAd
-didFailToPresentWithError:(nonnull NSError *)error {
+- (void)ad:(id)ad didFailToPresentFullScreenContentWithError:(NSError *)error {
     NSLog(@"Rewarded ad failed to present with error: %@.", error);
     rewardedAdBtn.hidden=true;
 }
 
-- (void)rewardedAdDidPresent:(nonnull GADRewardedAd *)rewardedAd {
-    NSLog(@"Rewarded ad has presented.");
-}
-
-- (void)rewardedAdDidDismiss:(nonnull GADRewardedAd *)rewardedAd {
+- (void)adDidDismissFullScreenContent:(id)ad {
     NSLog(@"Rewarded ad is closed.");
-    self.rewardedAd = [self createAndLoadRewardedAd];
+    [self createAndLoadRewardedAd];
 }
-
 
 @end

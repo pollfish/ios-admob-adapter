@@ -6,6 +6,6 @@ target 'ExamplePollfishAdMob' do
   use_frameworks!
 
   # Pods for ExamplePollfishAdMob
-pod 'Google-Mobile-Ads-SDK'
-pod 'PollfishAdMobAdapter'
+  pod 'Google-Mobile-Ads-SDK'
+  pod 'PollfishAdMobAdapter', :path => '../'
 end

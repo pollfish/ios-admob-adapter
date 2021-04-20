@@ -29,11 +29,12 @@
 		805F7E59257132850032EED6 /* GADMediationAdapterPollfish.h in Headers */ = {isa = PBXBuildFile; fileRef = 805F7E53257132850032EED6 /* GADMediationAdapterPollfish.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		805F7E5A257132850032EED6 /* GADPollfishRewardedNetworkExtras.h in Headers */ = {isa = PBXBuildFile; fileRef = 805F7E54257132850032EED6 /* GADPollfishRewardedNetworkExtras.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		805F7E5B257132850032EED6 /* GADPollfishRewardedNetworkExtras.m in Sources */ = {isa = PBXBuildFile; fileRef = 805F7E55257132850032EED6 /* GADPollfishRewardedNetworkExtras.m */; };
-		805F7E612571332E0032EED6 /* GoogleAppMeasurement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 805F7E5D2571332E0032EED6 /* GoogleAppMeasurement.framework */; };
 		805F7E622571332E0032EED6 /* GoogleMobileAds.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 805F7E5E2571332E0032EED6 /* GoogleMobileAds.xcframework */; };
 		805F7E632571332E0032EED6 /* nanopb.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 805F7E5F2571332E0032EED6 /* nanopb.xcframework */; };
 		805F7E642571332E0032EED6 /* GoogleUtilities.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 805F7E602571332E0032EED6 /* GoogleUtilities.xcframework */; };
 		805F7F3725713ADC0032EED6 /* pollfish.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 805F7F3625713ADC0032EED6 /* pollfish.xcframework */; };
+		80D8AADC262D9FB10095BACF /* GoogleAppMeasurement.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80D8AADB262D9FB10095BACF /* GoogleAppMeasurement.xcframework */; };
+		80D8AAE0262D9FEB0095BACF /* Pollfish.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80D8AADF262D9FEB0095BACF /* Pollfish.xcframework */; };
 		80EFFAAB25754E4E0050F4D7 /* PromisesObjC.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80EFFAAA25754E4E0050F4D7 /* PromisesObjC.xcframework */; };
 /* End PBXBuildFile section */
 
@@ -48,11 +49,12 @@
 		805F7E53257132850032EED6 /* GADMediationAdapterPollfish.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADMediationAdapterPollfish.h; sourceTree = "<group>"; };
 		805F7E54257132850032EED6 /* GADPollfishRewardedNetworkExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADPollfishRewardedNetworkExtras.h; sourceTree = "<group>"; };
 		805F7E55257132850032EED6 /* GADPollfishRewardedNetworkExtras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GADPollfishRewardedNetworkExtras.m; sourceTree = "<group>"; };
-		805F7E5D2571332E0032EED6 /* GoogleAppMeasurement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleAppMeasurement.framework; sourceTree = "<group>"; };
 		805F7E5E2571332E0032EED6 /* GoogleMobileAds.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = GoogleMobileAds.xcframework; sourceTree = "<group>"; };
 		805F7E5F2571332E0032EED6 /* nanopb.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = nanopb.xcframework; sourceTree = "<group>"; };
 		805F7E602571332E0032EED6 /* GoogleUtilities.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = GoogleUtilities.xcframework; sourceTree = "<group>"; };
 		805F7F3625713ADC0032EED6 /* pollfish.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = pollfish.xcframework; sourceTree = "<group>"; };
+		80D8AADB262D9FB10095BACF /* GoogleAppMeasurement.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = GoogleAppMeasurement.xcframework; sourceTree = "<group>"; };
+		80D8AADF262D9FEB0095BACF /* Pollfish.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = Pollfish.xcframework; sourceTree = "<group>"; };
 		80EFFAAA25754E4E0050F4D7 /* PromisesObjC.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = PromisesObjC.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,10 +64,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				805F7E632571332E0032EED6 /* nanopb.xcframework in Frameworks */,
-				805F7E612571332E0032EED6 /* GoogleAppMeasurement.framework in Frameworks */,
 				805F7E622571332E0032EED6 /* GoogleMobileAds.xcframework in Frameworks */,
 				80EFFAAB25754E4E0050F4D7 /* PromisesObjC.xcframework in Frameworks */,
 				805F7E642571332E0032EED6 /* GoogleUtilities.xcframework in Frameworks */,
+				80D8AADC262D9FB10095BACF /* GoogleAppMeasurement.xcframework in Frameworks */,
+				80D8AAE0262D9FEB0095BACF /* Pollfish.xcframework in Frameworks */,
 				805F7F3725713ADC0032EED6 /* pollfish.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -76,7 +79,8 @@
 		805F7E37257131AD0032EED6 = {
 			isa = PBXGroup;
 			children = (
-				805F7E5D2571332E0032EED6 /* GoogleAppMeasurement.framework */,
+				80D8AADF262D9FEB0095BACF /* Pollfish.xcframework */,
+				80D8AADB262D9FB10095BACF /* GoogleAppMeasurement.xcframework */,
 				805F7E5E2571332E0032EED6 /* GoogleMobileAds.xcframework */,
 				805F7E602571332E0032EED6 /* GoogleUtilities.xcframework */,
 				805F7E5F2571332E0032EED6 /* nanopb.xcframework */,
@@ -216,7 +220,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "PRODUCTS_DIR=${PROJECT_DIR}/Products\nPRODUCT_NAME=PollfishAdMobAdapter\nTARGET_NAME=PollfishAdMobAdapter\n\nrm -r ${PRODUCTS_DIR}\n\nmkdir -p ${PRODUCTS_DIR}\n\nxcodebuild archive \\\n-scheme ${TARGET_NAME} \\\n-destination \"generic/platform=iOS Simulator\" \\\n-archivePath ${PRODUCTS_DIR}/${PRODUCT_NAME}-Sim \\\nSKIP_INSTALL=NO \\\nBUILD_LIBRARY_FOR_DISTRIBUTION=YES \\\nEXCLUDED_ARCHS=arm64 # Until Google releases GoogleMobileAdsSDK with arm64 simulator support\n\n\nxcodebuild archive \\\n-scheme ${TARGET_NAME} \\\n-destination \"generic/platform=iOS\" \\\n-archivePath ${PRODUCTS_DIR}/${PRODUCT_NAME}-Dev \\\nSKIP_INSTALL=NO \\\nBUILD_LIBRARY_FOR_DISTRIBUTION=YES\n\nxcodebuild -create-xcframework \\\n-framework ${PRODUCTS_DIR}/${PRODUCT_NAME}-Dev.xcarchive/Products/Library/Frameworks/${PRODUCT_NAME}.framework \\\n-framework ${PRODUCTS_DIR}/${PRODUCT_NAME}-Sim.xcarchive/Products/Library/Frameworks/${PRODUCT_NAME}.framework \\\n-output ${PRODUCTS_DIR}/${PRODUCT_NAME}.xcframework\n\nrm -r ${PRODUCTS_DIR}/${PRODUCT_NAME}-Dev.xcarchive\nrm -r ${PRODUCTS_DIR}/${PRODUCT_NAME}-Sim.xcarchive\n";
+			shellScript = "PRODUCTS_DIR=${PROJECT_DIR}/Products\nPRODUCT_NAME=PollfishAdMobAdapter\nTARGET_NAME=PollfishAdMobAdapter\n\nrm -r ../${PRODUCT_NAME}.xcframework\nrm -r ${PRODUCTS_DIR}\n\nmkdir -p ${PRODUCTS_DIR}\n\nxcodebuild archive \\\n-scheme ${TARGET_NAME} \\\n-destination \"generic/platform=iOS Simulator\" \\\n-archivePath ${PRODUCTS_DIR}/${PRODUCT_NAME}-Sim \\\nSKIP_INSTALL=NO \\\nBUILD_LIBRARY_FOR_DISTRIBUTION=YES \\\n\n\nxcodebuild archive \\\n-scheme ${TARGET_NAME} \\\n-destination \"generic/platform=iOS\" \\\n-archivePath ${PRODUCTS_DIR}/${PRODUCT_NAME}-Dev \\\nSKIP_INSTALL=NO \\\nBUILD_LIBRARY_FOR_DISTRIBUTION=YES\n\nxcodebuild -create-xcframework \\\n-framework ${PRODUCTS_DIR}/${PRODUCT_NAME}-Dev.xcarchive/Products/Library/Frameworks/${PRODUCT_NAME}.framework \\\n-framework ${PRODUCTS_DIR}/${PRODUCT_NAME}-Sim.xcarchive/Products/Library/Frameworks/${PRODUCT_NAME}.framework \\\n-output ../${PRODUCT_NAME}.xcframework\n\nrm -r ${PRODUCTS_DIR}/${PRODUCT_NAME}-Dev.xcarchive\nrm -r ${PRODUCTS_DIR}/${PRODUCT_NAME}-Sim.xcarchive\nrm -r ${PRODUCTS_DIR}\n\ncd ../${PRODUCT_NAME}.xcframework\nfind . -name \"*.swiftinterface\" -exec sed -i -e 's/Pollfish\\.//g' {} \\;\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -375,7 +379,7 @@
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 11;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 984ZRM32BG;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -395,7 +399,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
-				MARKETING_VERSION = 5.5.2.0;
+				MARKETING_VERSION = 6.0.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.pollfish.mediation;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = NO;
@@ -409,7 +413,7 @@
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 11;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 984ZRM32BG;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -429,7 +433,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
-				MARKETING_VERSION = 5.5.2.0;
+				MARKETING_VERSION = 6.0.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.pollfish.mediation;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = NO;

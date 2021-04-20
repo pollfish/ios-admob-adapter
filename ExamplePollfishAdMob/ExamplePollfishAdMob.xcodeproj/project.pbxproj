@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00ED15D24B571B8DE8762FB2 /* Pods_ExamplePollfishAdMob.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB6DE711543F2E3F5CE94438 /* Pods_ExamplePollfishAdMob.framework */; };
 		40A0924B238941C200E557DE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A0924A238941C200E557DE /* AppDelegate.m */; };
 		40A0924E238941C200E557DE /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A0924D238941C200E557DE /* SceneDelegate.m */; };
 		40A09251238941C200E557DE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A09250238941C200E557DE /* ViewController.m */; };
@@ -45,9 +44,6 @@
 		40A0925A238941C500E557DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		40A0925B238941C500E557DE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		40E5CBBB238C6B110086FC52 /* PollfishAdMobAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PollfishAdMobAdapter.framework; sourceTree = "<group>"; };
-		7ACD3C9B44236E6F5A2BC8F6 /* Pods-ExamplePollfishAdMob.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExamplePollfishAdMob.debug.xcconfig"; path = "Target Support Files/Pods-ExamplePollfishAdMob/Pods-ExamplePollfishAdMob.debug.xcconfig"; sourceTree = "<group>"; };
-		C25EF3A69E06073659D166FE /* Pods-ExamplePollfishAdMob.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExamplePollfishAdMob.release.xcconfig"; path = "Target Support Files/Pods-ExamplePollfishAdMob/Pods-ExamplePollfishAdMob.release.xcconfig"; sourceTree = "<group>"; };
-		EB6DE711543F2E3F5CE94438 /* Pods_ExamplePollfishAdMob.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExamplePollfishAdMob.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +52,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				40E5CBBD238C6B9A0086FC52 /* PollfishAdMobAdapter.framework in Frameworks */,
-				00ED15D24B571B8DE8762FB2 /* Pods_ExamplePollfishAdMob.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,7 +62,6 @@
 			isa = PBXGroup;
 			children = (
 				40E5CBBB238C6B110086FC52 /* PollfishAdMobAdapter.framework */,
-				EB6DE711543F2E3F5CE94438 /* Pods_ExamplePollfishAdMob.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -111,8 +105,6 @@
 		B353134C354CCCB2DB1AB804 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				7ACD3C9B44236E6F5A2BC8F6 /* Pods-ExamplePollfishAdMob.debug.xcconfig */,
-				C25EF3A69E06073659D166FE /* Pods-ExamplePollfishAdMob.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -124,12 +116,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 40A0925F238941C500E557DE /* Build configuration list for PBXNativeTarget "ExamplePollfishAdMob" */;
 			buildPhases = (
-				BAB7C6EF131C982046FABFF8 /* [CP] Check Pods Manifest.lock */,
 				40A09242238941C200E557DE /* Sources */,
 				40A09243238941C200E557DE /* Frameworks */,
 				40A09244238941C200E557DE /* Resources */,
 				404C53AD238942D3003C604E /* Embed Frameworks */,
-				08DB131CC9AC398438F601A3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -184,48 +174,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		08DB131CC9AC398438F601A3 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ExamplePollfishAdMob/Pods-ExamplePollfishAdMob-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ExamplePollfishAdMob/Pods-ExamplePollfishAdMob-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ExamplePollfishAdMob/Pods-ExamplePollfishAdMob-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BAB7C6EF131C982046FABFF8 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ExamplePollfishAdMob-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		40A09242238941C200E557DE /* Sources */ = {
@@ -373,7 +321,6 @@
 		};
 		40A09260238941C500E557DE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7ACD3C9B44236E6F5A2BC8F6 /* Pods-ExamplePollfishAdMob.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -395,6 +342,67 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"c++\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AVFoundation\"",
+					"-framework",
+					"\"AudioToolbox\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreMedia\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"CoreVideo\"",
+					"-framework",
+					"\"FBLPromises\"",
+					"-framework",
+					"\"GoogleAppMeasurement\"",
+					"-framework",
+					"\"GoogleMobileAds\"",
+					"-framework",
+					"\"GoogleUtilities\"",
+					"-framework",
+					"\"MediaPlayer\"",
+					"-framework",
+					"\"MessageUI\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"Pollfish\"",
+					"-framework",
+					"\"PollfishAdMobAdapter\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"StoreKit\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UserMessagingPlatform\"",
+					"-framework",
+					"\"WebKit\"",
+					"-framework",
+					"\"nanopb\"",
+					"-weak_framework",
+					"\"AdSupport\"",
+					"-weak_framework",
+					"\"JavaScriptCore\"",
+					"-weak_framework",
+					"\"SafariServices\"",
+					"-weak_framework",
+					"\"WebKit\"",
+					"-ObjC",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.pollfish.mediation.ExamplePollfishAdMob;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -404,7 +412,6 @@
 		};
 		40A09261238941C500E557DE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C25EF3A69E06073659D166FE /* Pods-ExamplePollfishAdMob.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -426,6 +433,67 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"c++\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AVFoundation\"",
+					"-framework",
+					"\"AudioToolbox\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreMedia\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"CoreVideo\"",
+					"-framework",
+					"\"FBLPromises\"",
+					"-framework",
+					"\"GoogleAppMeasurement\"",
+					"-framework",
+					"\"GoogleMobileAds\"",
+					"-framework",
+					"\"GoogleUtilities\"",
+					"-framework",
+					"\"MediaPlayer\"",
+					"-framework",
+					"\"MessageUI\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"Pollfish\"",
+					"-framework",
+					"\"PollfishAdMobAdapter\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"StoreKit\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UserMessagingPlatform\"",
+					"-framework",
+					"\"WebKit\"",
+					"-framework",
+					"\"nanopb\"",
+					"-weak_framework",
+					"\"AdSupport\"",
+					"-weak_framework",
+					"\"JavaScriptCore\"",
+					"-weak_framework",
+					"\"SafariServices\"",
+					"-weak_framework",
+					"\"WebKit\"",
+					"-ObjC",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.pollfish.mediation.ExamplePollfishAdMob;
 				PRODUCT_NAME = "$(TARGET_NAME)";

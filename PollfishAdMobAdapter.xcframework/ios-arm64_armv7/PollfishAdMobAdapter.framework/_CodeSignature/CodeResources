@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/GADMRewardedAdPollfish.h</key>
 		<data>
-		ck8xxtXgxBDu6Cxz8DT1Fp5A20g=
+		zd9KphPOyblP04cS/w9a73CyX4I=
 		</data>
 		<key>Headers/GADMediationAdapterPollfish.h</key>
 		<data>
@@ -22,7 +22,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		Bf/vgB18XO/mTKEeg4Yghe1RBTw=
+		7Ky4gcsUbYaCdTGyCMPQ8YOm+Cw=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -35,11 +35,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ck8xxtXgxBDu6Cxz8DT1Fp5A20g=
+			zd9KphPOyblP04cS/w9a73CyX4I=
 			</data>
 			<key>hash2</key>
 			<data>
-			3odROsKByN8xRlDOB2YxQHO5GUlaisc6f5kKeAlTi9c=
+			qjTun5BKKVlgG8GcTJsG6g34ENRtn4ZMbOoMLYz6+d0=
 			</data>
 		</dict>
 		<key>Headers/GADMediationAdapterPollfish.h</key>

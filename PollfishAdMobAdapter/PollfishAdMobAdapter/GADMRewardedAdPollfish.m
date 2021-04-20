@@ -6,7 +6,7 @@
 //
 
 #import "GADMRewardedAdPollfish.h"
-#import <Pollfish/Pollfish.h>
+#import <Pollfish/Pollfish-Swift.h>
 #include <stdatomic.h>
 #import "GADPollfishRewardedNetworkExtras.h"
 #import "GADMAdapterPollfishConstants.h"
@@ -143,78 +143,57 @@
     
     //used to retrieve the top level window
     __block UIWindow *window = [[[UIApplication sharedApplication] windows] lastObject];
-      
-    PollfishParams *pollfishParams =  [PollfishParams initWith:^(PollfishParams *pollfishParams) {
-          
-          pollfishParams.indicatorPosition=PollFishPositionMiddleRight;
-          pollfishParams.releaseMode= releaseMode;
-          pollfishParams.rewardMode=true;
-          pollfishParams.requestUUID=requestUUID;
-          pollfishParams.offerwallMode=offerwallMode;
-          pollfishParams.pollfishViewContainer=window.rootViewController.view;
-    }];
-
-    [Pollfish initWithAPIKey:pollfishAPIKey andParams:pollfishParams];
-        
-   NSLog(@"Initializing Pollfish...");
-
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pollfishNotAvailable) name:@"PollfishSurveyNotAvailable" object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pollfishCompleted:) name:@"PollfishSurveyCompleted" object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pollfishReceived:) name:@"PollfishSurveyReceived" object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pollfishOpened) name:@"PollfishOpened" object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pollfishClosed) name:@"PollfishClosed" object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pollfishUsernotEligible) name:@"PollfishUserNotEligible" object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pollfishUserRejectedSurvey) name:@"PollfishUserRejectedSurvey" object:nil];
     
+    PollfishParams *pollfishParams = [[PollfishParams alloc] init:pollfishAPIKey];
+    [pollfishParams indicatorPosition:IndicatorPositionMiddleRight];
+    [pollfishParams platform:PlatformAdMob];
+    [pollfishParams releaseMode:releaseMode];
+    [pollfishParams rewardMode:true];
+    [pollfishParams requestUUID:requestUUID];
+    [pollfishParams offerwallMode:offerwallMode];
+    [pollfishParams viewContainer:window.rootViewController.view];
     
+    [Pollfish initWith:pollfishParams delegate:self];
+    
+    NSLog(@"Initializing Pollfish...");
 }
+
 #pragma mark - GADMediationRewardedAd
 
 - (void)presentFromViewController:(UIViewController *)viewController {
     [Pollfish show];
 }
 
+#pragma mark - PollfishDelegate methods
 
-
-#pragma mark - Pollfish Delegate methods
-
-- (void)pollfishCompleted:(NSNotification *)notification
+- (void) pollfishSurveyCompletedWithSurveyInfo:(SurveyInfo *)surveyInfo
 {
-    int rewardValue = [[[notification userInfo] valueForKey:@"reward_value"] intValue];
-    NSString *rewardName = [[notification userInfo] valueForKey:@"reward_name"];
+    int rewardValue = [[surveyInfo rewardValue] intValue];
+    NSString *rewardName = [surveyInfo rewardName];
     
-    if(POLLFISH_DEBUG) NSLog(@"Pollfish Survey Completed RewardName:%@ andRewardValue:%d",rewardName,rewardValue);
+    if(POLLFISH_DEBUG) NSLog(@"Pollfish Survey Completed RewardName:%@ andRewardValue:%d", rewardName, rewardValue);
     
-    GADAdReward *pollfishReward =[[GADAdReward alloc] initWithRewardType:rewardName
-                                                            rewardAmount:[NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@"%d", rewardValue]]];
+    GADAdReward *pollfishReward = [[GADAdReward alloc] initWithRewardType:rewardName
+                                                             rewardAmount:[NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@"%d", rewardValue]]];
     
     [_adEventDelegate didRewardUserWithReward:pollfishReward];
 }
 
-- (void)pollfishReceived:(NSNotification *)notification
+- (void) pollfishSurveyReceivedWithSurveyInfo:(SurveyInfo *)surveyInfo
 {
-    
     _adEventDelegate = _completionHandler(self, nil);
     
-    int rewardValue = [[[notification userInfo] valueForKey:@"reward_value"] intValue];
-    NSString *rewardName = [[notification userInfo] valueForKey:@"reward_name"];
-    
-    if(POLLFISH_DEBUG) NSLog(@"Pollfish Survey Received RewardName:%@ andRewardValue:%d",rewardName,rewardValue);
-    
+    if (surveyInfo != nil) {
+        int rewardValue = [[surveyInfo rewardValue] intValue];
+        NSString *rewardName = [surveyInfo rewardName];
+        
+        if(POLLFISH_DEBUG) NSLog(@"Pollfish Survey Received RewardName:%@ andRewardValue:%d", rewardName, rewardValue);
+    } else {
+        if(POLLFISH_DEBUG) NSLog(@"Pollfish Survey Received");
+    }
 }
 
-- (void)pollfishOpened
-{
-    if(POLLFISH_DEBUG) NSLog(@"Pollfish Opened");
-
-    [_adEventDelegate willPresentFullScreenView];
-    [_adEventDelegate didStartVideo];
-    [_adEventDelegate reportClick];
-    [_adEventDelegate reportImpression];
-    
-}
-
-- (void)pollfishClosed
+- (void) pollfishClosed
 {
     if(POLLFISH_DEBUG) NSLog(@"Pollfish Closed");
     
@@ -222,7 +201,17 @@
     [_adEventDelegate didDismissFullScreenView];
 }
 
-- (void)pollfishNotAvailable
+- (void) pollfishOpened
+{
+    if(POLLFISH_DEBUG) NSLog(@"Pollfish Opened");
+
+    [_adEventDelegate willPresentFullScreenView];
+    [_adEventDelegate didStartVideo];
+    [_adEventDelegate reportClick];
+    [_adEventDelegate reportImpression];
+}
+
+- (void) pollfishSurveyNotAvailable
 {
     if(POLLFISH_DEBUG) NSLog(@"Pollfish Not Available");
  
@@ -234,8 +223,7 @@
     _completionHandler(nil, error);
 }
 
-
-- (void)pollfishUsernotEligible
+- (void) pollfishUserNotEligible
 {
     if(POLLFISH_DEBUG)  NSLog(@"Pollfish User Not Eligible");
     
@@ -243,7 +231,7 @@
     [_adEventDelegate didDismissFullScreenView];
 }
 
-- (void)pollfishUserRejectedSurvey
+- (void) pollfishUserRejectedSurvey
 {
     if(POLLFISH_DEBUG) NSLog(@"Pollfish User Rejected Survey");
 

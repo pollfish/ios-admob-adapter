@@ -10,10 +10,10 @@
 #import "GADMediationAdapterPollfish.h"
 #import "GADPollfishRewardedNetworkExtras.h"
 #import "GADMAdapterPollfishConstants.h"
-#import <GoogleMobileAds/GoogleMobileAds.h>
+@import GoogleMobileAds;
 
 
-@interface GADMediationAdapterPollfish () <GADRewardedAdDelegate>
+@interface GADMediationAdapterPollfish () <GADMediationAdapter>
 @end
 
 @implementation GADMediationAdapterPollfish {
@@ -24,7 +24,6 @@
     return [GADPollfishRewardedNetworkExtras class];
 }
 
-
 + (GADVersionNumber)adSDKVersion {
   NSString *versionString = kGADMAdapterPollfishVersion;
   NSArray *versionComponents = [versionString componentsSeparatedByString:@"."];
@@ -33,21 +32,6 @@
     version.majorVersion = [versionComponents[0] integerValue];
     version.minorVersion = [versionComponents[1] integerValue];
     version.patchVersion = [versionComponents[2] integerValue];
-  }
-  return version;
-}
-
-+ (GADVersionNumber)version {
-  NSString *versionString = kGADMAdapterPollfishVersion;
-  NSArray *versionComponents = [versionString componentsSeparatedByString:@"."];
-  GADVersionNumber version = {0};
-  if (versionComponents.count == 4) {
-    version.majorVersion = [versionComponents[0] integerValue];
-    version.minorVersion = [versionComponents[1] integerValue];
-
-    // Adapter versions have 2 patch versions. Multiply the first patch by 100.
-    version.patchVersion = [versionComponents[2] integerValue] * 100
-      + [versionComponents[3] integerValue];
   }
   return version;
 }
@@ -66,6 +50,22 @@
   [_rewardedAd loadRewardedAdForAdConfiguration:adConfiguration
                               completionHandler:completionHandler];
 }
+
++ (GADVersionNumber)adapterVersion {
+    NSString *versionString = kGADMAdapterPollfishVersion;
+    NSArray *versionComponents = [versionString componentsSeparatedByString:@"."];
+    GADVersionNumber version = {0};
+    if (versionComponents.count == 4) {
+      version.majorVersion = [versionComponents[0] integerValue];
+      version.minorVersion = [versionComponents[1] integerValue];
+
+      // Adapter versions have 2 patch versions. Multiply the first patch by 100.
+      version.patchVersion = [versionComponents[2] integerValue] * 100
+        + [versionComponents[3] integerValue];
+    }
+    return version;
+}
+
 
 - (void)rewardedAd:(nonnull GADRewardedAd *)rewardedAd userDidEarnReward:(nonnull GADAdReward *)reward {
 
