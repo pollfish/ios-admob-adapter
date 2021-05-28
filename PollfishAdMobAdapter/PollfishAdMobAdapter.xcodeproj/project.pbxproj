@@ -32,7 +32,6 @@
 		805F7E622571332E0032EED6 /* GoogleMobileAds.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 805F7E5E2571332E0032EED6 /* GoogleMobileAds.xcframework */; };
 		805F7E632571332E0032EED6 /* nanopb.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 805F7E5F2571332E0032EED6 /* nanopb.xcframework */; };
 		805F7E642571332E0032EED6 /* GoogleUtilities.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 805F7E602571332E0032EED6 /* GoogleUtilities.xcframework */; };
-		805F7F3725713ADC0032EED6 /* pollfish.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 805F7F3625713ADC0032EED6 /* pollfish.xcframework */; };
 		80D8AADC262D9FB10095BACF /* GoogleAppMeasurement.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80D8AADB262D9FB10095BACF /* GoogleAppMeasurement.xcframework */; };
 		80D8AAE0262D9FEB0095BACF /* Pollfish.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80D8AADF262D9FEB0095BACF /* Pollfish.xcframework */; };
 		80EFFAAB25754E4E0050F4D7 /* PromisesObjC.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80EFFAAA25754E4E0050F4D7 /* PromisesObjC.xcframework */; };
@@ -69,7 +68,6 @@
 				805F7E642571332E0032EED6 /* GoogleUtilities.xcframework in Frameworks */,
 				80D8AADC262D9FB10095BACF /* GoogleAppMeasurement.xcframework in Frameworks */,
 				80D8AAE0262D9FEB0095BACF /* Pollfish.xcframework in Frameworks */,
-				805F7F3725713ADC0032EED6 /* pollfish.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,7 +377,7 @@
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 12;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 984ZRM32BG;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -399,7 +397,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
-				MARKETING_VERSION = 6.0.0.0;
+				MARKETING_VERSION = 6.0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.pollfish.mediation;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = NO;
@@ -413,7 +411,7 @@
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 12;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 984ZRM32BG;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -433,7 +431,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
-				MARKETING_VERSION = 6.0.0.0;
+				MARKETING_VERSION = 6.0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.pollfish.mediation;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = NO;
