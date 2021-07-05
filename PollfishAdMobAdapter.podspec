@@ -17,6 +17,7 @@ s.dependencies = {
     'Pollfish'=> '6.1.0',
     'Google-Mobile-Ads-SDK' => '8.7.0'
 }
+s.pod_target_xcconfig   = { 'VALID_ARCHS' => 'x86_64 armv7 arm64' }
 s.documentation_url = 'https://www.pollfish.com/docs/ios-admob-adapter'
 s.vendored_frameworks = 'PollfishAdMobAdapter.xcframework'
 end
