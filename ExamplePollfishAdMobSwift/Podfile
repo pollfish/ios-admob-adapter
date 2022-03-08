@@ -1,0 +1,9 @@
+platform :ios, '13.0'
+
+target 'ExamplePollfishAdMobSwift' do
+  use_frameworks!
+
+  # Pods for ExamplePollfishAdMobSwift
+  pod 'Google-Mobile-Ads-SDK'
+  pod 'PollfishAdMobAdapter', :path => '../'
+end

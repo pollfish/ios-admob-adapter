@@ -16,13 +16,11 @@
 @property (strong, nonatomic) IBOutlet UIButton *rewardedAdBtn;
 @end
 
-
 @implementation ViewController
 @synthesize rewardedAdBtn;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     [self createAndLoadRewardedAd];
 }
 
@@ -40,7 +38,7 @@
 
 - (void) createAndLoadRewardedAd {
     
-    rewardedAdBtn.hidden=true;
+    rewardedAdBtn.hidden = true;
     
     NSLog(@"createAndLoadRewardedAd");
     
@@ -59,7 +57,7 @@
             NSLog(@"Failed to load interstitial ad with error: %@", [error localizedDescription]);
             return;
         }
-        self->rewardedAdBtn.hidden=false;
+        self.rewardedAdBtn.hidden = false;
         self.rewardedAd = ad;
         self.rewardedAd.fullScreenContentDelegate = self;
     }];
