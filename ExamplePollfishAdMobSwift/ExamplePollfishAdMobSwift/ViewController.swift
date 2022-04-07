@@ -38,7 +38,7 @@ class ViewController: UIViewController, GADFullScreenContentDelegate {
         let pollfishNetworkExtras = GADPollfishRewardedNetworkExtras()
         pollfishNetworkExtras.pollfishAPIKey = "POLLFISH_API_KEY"
         pollfishNetworkExtras.releaseMode = false
-        pollfishNetworkExtras.requestUUID = "USER_ID";
+        pollfishNetworkExtras.requestUUID = "USER_ID"
         
         request.register(pollfishNetworkExtras)
         

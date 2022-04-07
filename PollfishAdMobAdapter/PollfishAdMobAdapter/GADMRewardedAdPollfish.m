@@ -17,7 +17,6 @@
 @implementation GADMRewardedAdPollfish{
     
     id<GADMediationRewardedAdEventDelegate> _adEventDelegate;
-    
 
     GADMediationRewardedLoadCompletionHandler _loadCompletionHandler;
 
@@ -31,6 +30,7 @@
     _adConfiguration = adConfiguration;
     __block atomic_flag completionHandlerCalled = ATOMIC_FLAG_INIT;
     __block GADMediationRewardedLoadCompletionHandler originalCompletionHandler = [completionHandler copy];
+    
     _loadCompletionHandler = ^id<GADMediationRewardedAdEventDelegate>(_Nullable id<GADMediationRewardedAd> rewardedAd, NSError *_Nullable error) {
         if (atomic_flag_test_and_set(&completionHandlerCalled)) {
             return nil;
@@ -67,7 +67,7 @@
 
     if ((jsonParams != nil) && ([jsonParams length] > 0)) {
         
-        NSLog(@"Pollfish jsonParams: %@", jsonParams);
+        if(POLLFISH_DEBUG) NSLog(@"Pollfish jsonParams: %@", jsonParams);
         
         NSData *data = [jsonParams dataUsingEncoding:NSUTF8StringEncoding];
         
@@ -99,26 +99,22 @@
     GADPollfishRewardedNetworkExtras *extras = [adConfiguration extras];
     
     if (extras) {
-        
         apiKey = extras.pollfishAPIKey;
         requestUUID  = extras.requestUUID;
         releaseMode = extras.releaseMode;
-        
-        if(POLLFISH_DEBUG) NSLog(@"Pollfish API Key: %@", apiKey);
-        if(POLLFISH_DEBUG) NSLog(@"Pollfish RequestUUID: %@", requestUUID);
-        if(POLLFISH_DEBUG) NSLog(@"Pollfish Release Mode: %d", releaseMode);
-        
+        offerwallMode = extras.offerwallMode;
     }
     
     if(POLLFISH_DEBUG) NSLog(@"Pollfish API Key: %@", apiKey);
+    if(POLLFISH_DEBUG) NSLog(@"Pollfish RequestUUID: %@", requestUUID);
+    if(POLLFISH_DEBUG) NSLog(@"Pollfish Release Mode: %d", releaseMode);
+    if(POLLFISH_DEBUG) NSLog(@"Pollfish Offerwall Mode: %d", offerwallMode);
     
     if ([apiKey length] == 0) {
         NSError *error = [NSError errorWithDomain:kGADMAdapterPollfishErrorDomain code:204 userInfo:nil];
         completionHandler(nil, error);
         return;
     }
-    
-    //__block UIWindow *window = [[[UIApplication sharedApplication] windows] lastObject];
     
     PollfishParams *pollfishParams = [[PollfishParams alloc] init:apiKey];
     [pollfishParams indicatorPosition:IndicatorPositionMiddleRight];
@@ -127,7 +123,6 @@
     [pollfishParams rewardMode:true];
     [pollfishParams requestUUID:requestUUID];
     [pollfishParams offerwallMode:offerwallMode];
-    //[pollfishParams viewContainer:window.rootViewController.view];
     
     [Pollfish initWith:pollfishParams delegate:self];
     
@@ -148,9 +143,7 @@
     NSString *rewardName;
     
     if (surveyInfo.rewardValue) {
-        //int rewardValueInt = 1500;
-        rewardValue = [NSDecimalNumber decimalNumberWithString:@"1500"];
-        //rewardValue = [NSDecimalNumber decimalNumberWithDecimal: [surveyInfo.rewardValue decimalValue]];
+        rewardValue = [NSDecimalNumber decimalNumberWithDecimal: [surveyInfo.rewardValue decimalValue]];
     } else {
         rewardValue = [NSDecimalNumber zero];
     }
@@ -161,16 +154,14 @@
         rewardName = @"";
     }
     
-//    dispatch_async(dispatch_get_main_queue(), ^{
-        GADAdReward *adReward = [[GADAdReward alloc] initWithRewardType:rewardName rewardAmount:rewardValue];
-        
-        if(POLLFISH_DEBUG) NSLog(@"v4 Pollfish Survey Completed RewardName:%@ andRewardValue:%d", adReward.type, adReward.amount.intValue);
-        
-        id<GADMediationRewardedAdEventDelegate> strongDelegate = self->_adEventDelegate;
-        
-        [strongDelegate didEndVideo];
-        [strongDelegate didRewardUserWithReward:adReward];
-//    });
+    GADAdReward *adReward = [[GADAdReward alloc] initWithRewardType:rewardName rewardAmount:rewardValue];
+    
+    if(POLLFISH_DEBUG) NSLog(@"Pollfish Survey Completed RewardName:%@ andRewardValue:%d", adReward.type, adReward.amount.intValue);
+    
+    id<GADMediationRewardedAdEventDelegate> strongDelegate = self->_adEventDelegate;
+    
+    [strongDelegate didEndVideo];
+    [strongDelegate didRewardUserWithReward:adReward];
 }
 
 - (void) pollfishSurveyReceivedWithSurveyInfo:(SurveyInfo *)surveyInfo
