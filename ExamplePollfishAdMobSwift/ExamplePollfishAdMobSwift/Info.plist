@@ -23,5 +23,7 @@
 			</array>
 		</dict>
 	</dict>
+    <key>NSUserTrackingUsageDescription</key>
+    <string>This identifier will be used to deliver personalized ads/surveys to you.</string>
 </dict>
 </plist>

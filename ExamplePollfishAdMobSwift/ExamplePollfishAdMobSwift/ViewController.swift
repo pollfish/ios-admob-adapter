@@ -8,15 +8,32 @@
 import UIKit
 import PollfishAdMobAdapter
 import GoogleMobileAds
+#if canImport(AppTrackingTransparency)
+import AppTrackingTransparency
+#endif
 
 class ViewController: UIViewController, GADFullScreenContentDelegate {
     
     @IBOutlet weak var rewardedAdBtn: UIButton!
     private var rewardedAd: GADRewardedAd?
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        createAndLoadRewardedAd()
+    override func viewDidAppear(_ animated: Bool) {
+        if #available(iOS 14, *) {
+            requestIDFAPermission()
+        } else {
+            createAndLoadRewardedAd()
+        }
+    }
+    
+    @available(iOS 14, *)
+    func requestIDFAPermission() {
+        #if canImport(AppTrackingTransparency)
+        ATTrackingManager.requestTrackingAuthorization { status in
+            DispatchQueue.main.async {
+                self.createAndLoadRewardedAd()
+            }
+        }
+        #endif
     }
     
     @IBAction func showRewardedAd(_ sender: Any) {

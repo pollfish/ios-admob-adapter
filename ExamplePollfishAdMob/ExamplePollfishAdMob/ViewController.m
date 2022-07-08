@@ -19,9 +19,29 @@
 @implementation ViewController
 @synthesize rewardedAdBtn;
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    [self createAndLoadRewardedAd];
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    if (@available(iOS 14, *)) {
+        [self requestIDFAPermission];
+    } else {
+        [self createAndLoadRewardedAd];
+    }
+}
+
+- (void)requestIDFAPermission {
+#if __has_include(<AppTrackingTransparency/AppTrackingTransparency.h>)
+    if (@available(iOS 14, *)) {
+        [ATTrackingManager requestTrackingAuthorizationWithCompletionHandler:^(ATTrackingManagerAuthorizationStatus status) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self createAndLoadRewardedAd];
+            });
+        }];
+    } else {
+        // Fallback on earlier versions
+    }
+#endif
 }
 
 - (IBAction)showRewardedAd:(id)sender {
