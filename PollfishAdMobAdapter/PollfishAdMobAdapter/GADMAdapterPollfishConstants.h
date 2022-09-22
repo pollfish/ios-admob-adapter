@@ -8,6 +8,6 @@
 #define POLLFISH_DEBUG 0
 
 // Adapter version string
-static NSString *const kGADMAdapterPollfishVersion = @"6.2.7.0";
+static NSString *const kGADMAdapterPollfishVersion = @"6.3.0.0";
 
 static NSString *const kGADMAdapterPollfishErrorDomain = @"com.pollfish.mediation";

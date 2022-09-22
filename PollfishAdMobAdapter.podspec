@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 s.name = 'PollfishAdMobAdapter'
-s.version = '6.2.7.0'
-s.platform = :ios, '10.0'
+s.version = '6.3.0.0'
+s.platform = :ios, '11.0'
 s.license = { :type => 'Commercial', :text => 'See https://www.pollfish.com/terms/publisher' }
 s.summary = 'Pollfish iOS Adapter for AdMob Mediation'
 s.description = 'Adapter for publishers looking to use AdMob mediation to load and show Rewarded Surveys from Pollfish in the same waterfall with other Rewarded Ads.'
@@ -14,7 +14,7 @@ s.source = {
 :tag => s.version.to_s
 }
 s.dependencies = {
-    'Pollfish'=> '6.2.7',
+    'Pollfish'=> '6.3.0',
     'Google-Mobile-Ads-SDK' => '9.7.0'
 }
 s.pod_target_xcconfig   = { 'VALID_ARCHS' => 'x86_64 armv7 arm64' }
