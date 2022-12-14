@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name = 'PollfishAdMobAdapter'
-s.version = '6.3.1.0'
+s.version = '6.3.1.1'
 s.platform = :ios, '11.0'
 s.license = { :type => 'Commercial', :text => 'See https://www.pollfish.com/terms/publisher' }
 s.summary = 'Pollfish iOS Adapter for AdMob Mediation'
