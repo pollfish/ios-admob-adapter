@@ -22,7 +22,7 @@ let package = Package(
         .package(
             name: "Pollfish",
             url: "https://github.com/pollfish/ios-sdk-pollfish.git",
-            .exact("6.3.0")
+            .exact("6.4.1")
         )
     ],
     targets: [
